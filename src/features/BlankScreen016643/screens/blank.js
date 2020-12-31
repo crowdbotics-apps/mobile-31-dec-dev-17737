@@ -29,8 +29,14 @@ export default class Blank extends React.Component {
   render = () => (
     <View>
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Button
+        title="Press me!"
+        onPress={() =>
+          this.props.navigation.navigate("CopyofBlankScreen016655")
+        }
+      />
     </View>
   )
 }
 
-const styles = StyleSheet.create({ View_1: {}, Button_2: {} })
+const styles = StyleSheet.create({ View_1: {}, Button_2: {}, Button_3: {} })
