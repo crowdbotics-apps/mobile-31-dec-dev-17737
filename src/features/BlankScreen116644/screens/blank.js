@@ -47,6 +47,10 @@ export default class Blank extends React.Component {
         onChangeText={nextValue => this.setState({ TextInput_3: nextValue })}
       />
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Button
+        title="Press me!"
+        onPress={() => this.props.navigation.navigate("BlankScreen216653")}
+      />
     </View>
   )
 }
@@ -56,5 +60,6 @@ const styles = StyleSheet.create({
   Switch_5: { alignSelf: "flex-start" },
   TextInput_2: { height: 100 },
   TextInput_3: {},
-  Button_4: {}
+  Button_4: {},
+  Button_6: {}
 })
