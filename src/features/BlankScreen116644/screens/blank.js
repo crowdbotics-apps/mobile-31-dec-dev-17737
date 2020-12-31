@@ -24,18 +24,37 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { TextInput_2: "" }
+  state = { Switch_5: true, TextInput_2: "", TextInput_3: "" }
 
   render = () => (
     <View>
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        style={styles.Switch_5}
+        value={this.state.Switch_5}
+        onValueChange={nextChecked => this.setState({ Switch_5: nextChecked })}
+      />
       <TextInput
         placeholder="Sample text input placeholder"
         multiline={true}
+        style={styles.TextInput_2}
         value={this.state.TextInput_2}
         onChangeText={nextValue => this.setState({ TextInput_2: nextValue })}
       />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_3}
+        onChangeText={nextValue => this.setState({ TextInput_3: nextValue })}
+      />
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
     </View>
   )
 }
 
-const styles = StyleSheet.create({ View_1: {}, TextInput_2: {} })
+const styles = StyleSheet.create({
+  View_1: {},
+  Switch_5: { alignSelf: "flex-start" },
+  TextInput_2: { height: 100 },
+  TextInput_3: {},
+  Button_4: {}
+})
