@@ -50,6 +50,10 @@ export default class Blank extends React.Component {
         title="Press me!"
         onPress={() => this.props.navigation.navigate("BlankScreen116669")}
       />
+      <Button
+        title="Press me!"
+        onPress={() => this.props.navigation.navigate("BlankScreen116669")}
+      />
     </View>
   )
 }
@@ -59,5 +63,6 @@ const styles = StyleSheet.create({
   Switch_5: { alignSelf: "flex-start" },
   TextInput_2: { height: 100 },
   TextInput_3: {},
-  Button_4: {}
+  Button_4: {},
+  Button_7: {}
 })
